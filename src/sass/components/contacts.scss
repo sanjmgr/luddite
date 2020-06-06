@@ -1,0 +1,103 @@
+.contacts--section {
+  padding-top: 10rem;
+  padding-bottom: 7rem;
+  background-color: #2d2e32;
+
+  .info--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .label--container {
+      .primary--label {
+        color: #fff;
+        font-size: 2rem;
+        box-decoration-break: clone;
+        max-width: 32rem;
+      }
+      .say--hi {
+        padding-top: 2rem;
+        color: #fff;
+        font-size: 2rem;
+        .hi {
+          color: #5fba8e;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .contacts--details--container {
+      .information--label {
+        font-size: 1.2rem;
+        color: #8e8f93;
+      }
+      .address--label {
+        font-size: 1.2rem;
+        color: #8e8f93;
+        padding-top: 1rem;
+      }
+      .email--address {
+        font-size: 2rem;
+        color: #fff;
+      }
+      .nav-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 4rem;
+
+        .current {
+          color: #5fba8e;
+          font-size: 1.2rem;
+          margin-left: -2rem;
+        }
+
+        .nav--label {
+          color: #fff;
+          font-size: 1.2rem;
+
+          &:hover,
+          &:active {
+            color: #5fba8e;
+          }
+        }
+      }
+    }
+  }
+
+  .footer--section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 7rem;
+
+    .brand--section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .brand--label {
+        font-size: 1.5rem;
+        color: #fff;
+        padding-right: 5rem;
+      }
+      .copy-right {
+        font-size: 1.2rem;
+        color: #8e8f93;
+      }
+    }
+    .social--media--section {
+      margin-left: -10rem;
+      .social-media {
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+
+      // display: flex;
+      // flex-direction: row;
+      // justify-content: space-between;
+      // align-items: center;
+    }
+  }
+}

@@ -10,6 +10,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-icons": "^3.0.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -18,7 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "concurrently \"node-sass ./src/sass/style.scss ./src/css/style.css --watch\" \"npm run start\"",
+    "sass:compile": "node-sass ./src/sass/main.scss ./src/css/style.css --watch",
+    "dev": "concurrently \"node-sass ./src/sass/main.scss ./src/css/style.css --watch\" \"npm run start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

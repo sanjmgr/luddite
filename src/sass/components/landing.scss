@@ -1,0 +1,140 @@
+.landing-section {
+  background-color: #2d2e32;
+}
+
+.landing--page {
+  color: #fff;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .description--section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2rem 15rem;
+
+    .designation--label {
+      background-color: #5ff5ab;
+      padding: 0.5rem 1rem;
+      font-size: 1.4rem;
+      color: #000;
+    }
+    .idiom {
+      line-height: 3.5rem;
+      &--label {
+        margin-top: 2rem;
+        font-size: 4rem;
+        color: #fff;
+        word-spacing: 2rem;
+      }
+    }
+
+    .work--description {
+      margin-top: 2rem;
+      .brief--description {
+        color: #606166;
+        font-size: 1.4rem;
+        width: 40rem;
+        box-decoration-break: slice;
+        letter-spacing: 0.2rem;
+      }
+    }
+
+    .chat {
+      margin-top: 4rem;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      text-decoration: underline;
+      a {
+        color: #5fba8e;
+        font-weight: 900;
+      }
+    }
+
+    .statistics--section {
+      display: flex;
+      margin-top: 8rem;
+      margin-left: -15rem;
+      .statics {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        &--count {
+          font-size: 3rem;
+          color: #fff;
+        }
+        &--label {
+          margin-left: 1rem;
+          line-height: 1.5rem;
+          color: #606166;
+          font-size: 1.4rem;
+          box-decoration-break: clone;
+          width: 3rem;
+        }
+      }
+      .projects {
+        margin-left: 10rem;
+      }
+    }
+  }
+
+  .tech--section {
+    .tech--circle {
+      height: 40rem;
+      width: 40rem;
+      border-radius: 40rem;
+      background-color: #29282d;
+      position: relative;
+
+      .js {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 10rem;
+        background-color: #25262a;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0rem;
+        right: 4rem;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      }
+
+      .reactjs {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 10rem;
+        background-color: #25262a;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 20rem;
+        right: -4rem;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      }
+
+      .python {
+        height: 12rem;
+        width: 12rem;
+        border-radius: 10rem;
+        background-color: #25262a;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 8rem;
+        left: -3rem;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}

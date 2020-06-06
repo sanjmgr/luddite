@@ -1,0 +1,71 @@
+.navbar--container {
+  background-color: #2d2e32;
+}
+
+.brand-label {
+  font-size: x-large;
+  color: #fff;
+  text-transform: capitalize;
+  &:hover {
+    transform: translateY(-3px);
+    color: #66f4ac;
+    transition: all 0.2s;
+
+    &::after {
+      transform: scalex(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+}
+
+.nav-content {
+  margin-left: 5rem;
+
+  .active {
+    color: #66f4ac;
+  }
+}
+
+.nav-item {
+  color: #fff;
+  font-size: $nav-font-size;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    color: #66f4ac;
+
+    &::after {
+      transform: scalex(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    color: #66f4ac;
+  }
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-item {
+  position: absolute;
+  right: 0;
+}

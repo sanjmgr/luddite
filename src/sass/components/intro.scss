@@ -1,0 +1,202 @@
+.intro-section {
+  background-color: #25262a;
+  padding-top: 9rem;
+  padding-bottom: 4rem;
+
+  .brief--intro--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .work--brief--container {
+      flex-direction: column;
+      justify-content: space-around;
+
+      .work--container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 3rem;
+        background-color: #2d2e32;
+        border-radius: 1.2rem;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+        z-index: 10;
+
+        &:not(:last-child) {
+          margin-bottom: 1.2rem;
+        }
+
+        .label--brief {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          // align-items: flex-start;
+
+          .primary--label {
+            font-size: 2rem;
+            color: #5fba8e;
+            font-weight: 900;
+          }
+
+          .secondary--label {
+            font-size: 1.2rem;
+            color: #606166;
+          }
+
+          .active {
+            text-decoration: underline;
+          }
+          .projects--count {
+            font-size: 1.4rem;
+            color: #fff;
+            &:hover,
+            &:active {
+              text-decoration: underline;
+            }
+          }
+        }
+        .icon--container {
+          padding-left: 7rem;
+        }
+      }
+    }
+
+    .brief--intro--container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: centers;
+      .introduce {
+        color: #606166;
+        font-size: 1.2rem;
+      }
+      .primary--intro--title {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 300;
+        box-decoration-break: slice;
+        max-width: 32rem;
+        line-height: 3rem;
+      }
+
+      .secondary--intro--title {
+        box-decoration-break: clone;
+        max-width: 32rem;
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: #fff;
+        font-style: italic;
+        padding-top: 2rem;
+        padding-bottom: 1.2rem;
+      }
+
+      .ternary--intro--tittle {
+        color: #606166;
+        font-size: 1.2rem;
+        box-decoration-break: clone;
+        max-width: 32rem;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+
+  .latest-work--section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14rem;
+
+    .start--section {
+      .latest--work-label {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 7rem;
+
+        .primary-title {
+          color: #fff;
+          font-size: 2rem;
+          font-weight: 400;
+          margin-bottom: 0.7rem;
+        }
+        .secondary--title {
+          color: #8e8f93;
+          font-size: 1.2rem;
+        }
+      }
+
+      .all--projects {
+        margin-top: 10rem;
+        .primary--label {
+          font-size: 2rem;
+          color: #5fba8e;
+          text-transform: uppercase;
+          text-decoration: underline;
+          padding-bottom: 2rem;
+          text-align: center;
+        }
+        .secondary--label {
+          font-size: 1.2rem;
+          color: #8e8f93;
+          text-align: center;
+
+          .contact {
+            color: #5fba8e;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .card--container {
+      background-image: linear-gradient(to right, #16191e, #222327);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      border-radius: 1.2rem;
+      background-size: cover;
+      &:not(:last-child) {
+        margin-bottom: 4.5rem;
+      }
+
+      .card--title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 4rem;
+
+        .primary--card-title {
+          color: #fff;
+          font-size: 2rem;
+          font-weight: 400;
+          padding-right: 6rem;
+        }
+        .tech--list {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          .tech--title {
+            padding: 0.5rem 1.2rem;
+            background-color: #4e4f53;
+            color: #c0c1c5;
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+            &:not(:last-child) {
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+      .cards--container {
+        height: 17rem;
+        .cards {
+          margin-top: 2rem;
+          height: 15rem;
+          background-size: cover;
+          background-blend-mode: screen;
+        }
+      }
+    }
+  }
+}
