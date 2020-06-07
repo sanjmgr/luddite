@@ -1,10 +1,50 @@
 import React from 'react';
 import { DiCode } from 'react-icons/di';
 import { AiOutlineDeploymentUnit } from 'react-icons/ai';
-import Design from '../assets/design.png';
-import Portrait from '../assets/Portrait.png';
-import Mobile from '../assets/Mobile.png';
-import Travel from '../assets/Travel.jpg';
+import { GiChart } from 'react-icons/gi';
+
+import MERN from '../assets/MERN.png';
+import Netflix from '../assets/Netflix.png';
+import Profile from '../assets/Profile.jpg';
+import { Category } from './Category';
+import { LatestWork } from './LatestWork';
+
+const categoryObject = [
+  {
+    label: 'Design',
+    description: 'Create digital products withh unique ideas',
+    projectsCount: 26,
+    Icon: AiOutlineDeploymentUnit,
+    size: 30,
+  },
+  {
+    label: 'Full Stack',
+    description: 'Writing clean, functional code on the front- and back-end',
+    projectsCount: 6,
+    Icon: DiCode,
+    size: 40,
+  },
+  {
+    label: 'Data Viz',
+    description: 'Make Sure Your Data Is Right for the Story.',
+    projectsCount: 12,
+    Icon: GiChart,
+    size: 25,
+  },
+];
+
+const latestWork = [
+  {
+    title: 'DevConnector',
+    cards: MERN,
+    techs: ['MongoDB', 'ExpressJS', 'ReactJS'],
+  },
+  {
+    title: 'Netflix Clone',
+    cards: Netflix,
+    techs: [' HTML', 'SCSS', 'JavaScript'],
+  },
+];
 
 export const Intro = () => {
   return (
@@ -12,54 +52,9 @@ export const Intro = () => {
       <div className=' container'>
         <div className='brief--intro--container'>
           <div className='work--brief--container'>
-            <div className='work--container'>
-              <div className='label--brief'>
-                <p className='primary--label'>Design</p>
-                <p className='secondary--label'>
-                  Create digital products withh unique ideas
-                </p>
-                <a href='#' className='projects--count active'>
-                  20 Projects
-                </a>
-              </div>
-              <div className='icon--container'>
-                <img
-                  src={Design}
-                  height={30}
-                  width={30}
-                  color='#5fba8e'
-                  alt='design'
-                />
-              </div>
-            </div>
-            <div className='work--container'>
-              <div className='label--brief'>
-                <p className='primary--label'>Front-End</p>
-                <p className='secondary--label'>
-                  I develop front-end with coding super smooth
-                </p>
-                <a href='#' className='projects--count'>
-                  165 Projects
-                </a>
-              </div>
-              <div className='icon--container'>
-                <DiCode size={35} color='#5fba8e' />
-              </div>
-            </div>
-            <div className='work--container'>
-              <div className='label--brief'>
-                <p className='primary--label'>SEO</p>
-                <p className='secondary--label'>
-                  Boost your business with SEO optimize
-                </p>
-                <a href='#' className='projects--count'>
-                  3 Projects
-                </a>
-              </div>
-              <div className='icon--container'>
-                <AiOutlineDeploymentUnit size={30} color='#5fba8e' />
-              </div>
-            </div>
+            {categoryObject.map((category, index) => (
+              <Category {...category} key={index} />
+            ))}
           </div>
           <div className='brief--intro--container'>
             <p className='introduce'>Introduce</p>
@@ -87,19 +82,13 @@ export const Intro = () => {
                 Perfect solution for digital experience
               </p>
             </div>
-            <div className='card--container'>
-              <div className='card--title'>
-                <p className='primary--card-title'>Lewis</p>
-                <div className='tech--list'>
-                  <p className='tech--title'>Javascript</p>
-                  <p className='tech--title'>ExpressJS</p>
-                  <p className='tech--title'>Graphql</p>
-                </div>
-              </div>
-              <div className='cards--container'>
-                <img className='cards' src={Portrait} alt='cards' />
-              </div>
-            </div>
+            <LatestWork
+              {...{
+                title: 'Profile UI',
+                cards: Profile,
+                techs: ['Javascript', 'React-Native'],
+              }}
+            />
             <div className='all--projects'>
               <p className='primary--label'>All Projects</p>
               <p className='secondary--label'>
@@ -112,33 +101,9 @@ export const Intro = () => {
             </div>
           </div>
           <div className='end--section'>
-            <div className='card--container'>
-              <div className='card--title'>
-                <p className='primary--card-title'>Finaco</p>
-                <div className='tech--list'>
-                  <p className='tech--title'>ReactJS</p>
-                  <p className='tech--title'>DenoJS</p>
-                  <p className='tech--title'>MongoDB</p>
-                </div>
-              </div>
-              <div className='cards--container'>
-                <img className='cards' src={Travel} alt='cards' />
-              </div>
-            </div>
-            <div className='card--container'>
-              <div className='card--title'>
-                <p className='primary--card-title'>Focus</p>
-                <div className='tech--list'>
-                  <p className='tech--title'>Typescript</p>
-                  <p className='tech--title'>ReactJS</p>
-                  <p className='tech--title'>DenoJS</p>
-                  <p className='tech--title'>Sass</p>
-                </div>
-              </div>
-              <div className='cards--container'>
-                <img className='cards' src={Mobile} alt='cards' />
-              </div>
-            </div>
+            {latestWork.map((project, index) => (
+              <LatestWork {...project} key={index} />
+            ))}
           </div>
         </div>
       </div>

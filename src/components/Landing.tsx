@@ -27,7 +27,7 @@ export const Landing = () => {
               <p className='statics--label'>Years Experience</p>
             </div>
             <div className='projects statics'>
-              <p className='statics--count'>10</p>
+              <p className='statics--count'>42</p>
               <p className='statics--label'>Projects completed</p>
             </div>
           </div>
