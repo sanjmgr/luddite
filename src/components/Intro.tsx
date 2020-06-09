@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { DiCode } from 'react-icons/di';
 import { AiOutlineDeploymentUnit } from 'react-icons/ai';
 import { GiChart } from 'react-icons/gi';
+import Typed from 'typed.js';
 
 import MERN from '../assets/MERN.png';
 import Netflix from '../assets/Netflix.png';
@@ -47,6 +49,22 @@ const latestWork = [
 ];
 
 export const Intro = () => {
+  useEffect(() => {
+    new Typed('.primary--intro--title', {
+      typeSpeed: 100,
+      startDelay: 100,
+      smartBackspace: true,
+      showCursor: true,
+      backSpeed: 100,
+      loop: true,
+      strings: [
+        "Hello! I'm Sanjay Galami Magar",
+        "I'm Computer Enginner",
+        "I'm Full Stack developer",
+      ],
+    });
+  }, []);
+
   return (
     <div className='intro-section'>
       <div className=' container'>
@@ -58,9 +76,7 @@ export const Intro = () => {
           </div>
           <div className='brief--intro--container'>
             <p className='introduce'>Introduce</p>
-            <p className='primary--intro--title'>
-              Hello! I'm Sanjay Galami Magar
-            </p>
+            <p className='primary--intro--title'></p>
             <p className='secondary--intro--title'>
               Every great design begin with an even better story
             </p>
@@ -93,10 +109,7 @@ export const Intro = () => {
               <p className='primary--label'>All Projects</p>
               <p className='secondary--label'>
                 Some projects not allowe publish by NDA, if you want to see
-                more,{' '}
-                <a href='#' className='contact'>
-                  contact
-                </a>
+                more, <Link to='/contacts'>contact</Link>
               </p>
             </div>
           </div>

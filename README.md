@@ -42,4 +42,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
 # luddite
+
+# TODO
+
+1. Typing Intro
+2. Drag and dropable repo cards
+3. Display statistics content on cards only when hover
+4. Since being SPA, make scroll to the corresponding component while click on link to navigate
+5. Loading spinner

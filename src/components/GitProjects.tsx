@@ -12,7 +12,7 @@ interface GitProjectsProps {
 }
 
 export const GitProjects: React.FC = () => {
-  const [data, setData] = useState<GitProjectsProps>({
+  const [gitRepo, setGitRepo] = useState<GitProjectsProps>({
     username: 'sanjaymagar',
     clientId: '26c196bacea7db10cf48',
     clientSecret: '0885cb690e07d2a93a6afb0891fb552fd9f7aa53',
@@ -25,7 +25,7 @@ export const GitProjects: React.FC = () => {
   const [error, setError] = React.useState(null);
 
   useEffect(() => {
-    const { username, clientId, clientSecret, count, sort } = data;
+    const { username, clientId, clientSecret, count, sort } = gitRepo;
 
     const fetchData = async () => {
       setIsLoading(true);
@@ -34,7 +34,7 @@ export const GitProjects: React.FC = () => {
           `https://api.github.com/users/${username}/repos?per_page=${count}&sort=${sort}&client_id=${clientId}&client_secret=${clientSecret}`
         );
         const { data } = response;
-        setData({ ...data, repos: data });
+        setGitRepo({ ...data, repos: data });
         setIsLoading(false);
       } catch (error) {
         setError(error);
@@ -44,19 +44,14 @@ export const GitProjects: React.FC = () => {
     fetchData();
   }, []);
 
-  const { repos, clientId, clientSecret } = data;
+  const { repos } = gitRepo;
   return (
     <div className='gitprojects--section'>
       <div className='container'>
         <h3 className='git--repos--label'>Repositories</h3>
         <div className='gitprojects--container'>
           {repos.map(repo => (
-            <RepoCard
-              {...repo}
-              clientId={clientId}
-              clientSecret={clientSecret}
-              key={repo.id}
-            />
+            <RepoCard {...repo} key={repo.id} />
           ))}
         </div>
       </div>

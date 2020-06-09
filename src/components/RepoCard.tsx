@@ -54,11 +54,16 @@ export const RepoCard: React.FC<RepoCardProps> = ({
   const keys: any[] = Object.keys(languagesList);
   const values: any[] = Object.values(languagesList);
   const total: any = values.reduce((acc: any, cv: any) => acc + cv, 0);
+  const navigateToRepo = (url: any) => {
+    window.location = url;
+  };
 
   return (
     <div className='project--card'>
       <div className='card--label'>
-        <p className='repo--label'>{name}</p>
+        <p className='repo--label' onClick={() => navigateToRepo(html_url)}>
+          {name}
+        </p>
         <div className='repo--details--container'>
           <div className='repo--statistics'>
             <AiOutlineStar size={14} color='#fff' />
@@ -81,7 +86,7 @@ export const RepoCard: React.FC<RepoCardProps> = ({
       <div className='languages--container'>
         {keys.map((key, index) => (
           <p className='language' key={index}>
-            {key}: {+((values[index] * 100) / total).toFixed(2) + '%'}
+            {key}: {+((values[index] * 100) / total).toFixed(1) + '%'}
           </p>
         ))}
       </div>

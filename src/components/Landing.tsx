@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { GrReactjs } from 'react-icons/gr';
 import { FaPython } from 'react-icons/fa';
 import JS from '../assets/javascript.png';
@@ -19,7 +21,7 @@ export const Landing = () => {
             </p>
           </div>
           <div className='chat'>
-            <a href='#'>Let's chat!</a>
+            <Link to='/chat'>Let's chat!</Link>
           </div>
           <div className='statistics--section'>
             <div className='experience statics'>

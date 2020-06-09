@@ -15,14 +15,18 @@ export const Category = ({
   Icon,
   size = 30,
 }: CategoryProps) => {
+  const navigateToGitHub = () => {
+    const url: any = 'https://github.com/sanjaymagar';
+    window.location = url;
+  };
   return (
     <div className='work--container'>
       <div className='label--brief'>
         <p className='primary--label'>{label}</p>
         <p className='secondary--label'>{description}</p>
-        <a href='#' className='projects--count'>
+        <p className='projects--count' onClick={navigateToGitHub}>
           {projectsCount} Projects
-        </a>
+        </p>
       </div>
       <div className='icon--container'>
         <Icon size={size} color='#5fba8e' />

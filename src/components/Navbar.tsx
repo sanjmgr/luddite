@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { FaInstagram } from 'react-icons/fa';
 import { AiFillGithub } from 'react-icons/ai';
 import { GoMail } from 'react-icons/go';
@@ -9,10 +11,10 @@ export const Navbar = () => {
     <div className='navbar--container'>
       <div className='container'>
         <nav className='navbar navbar-expand-lg pt-4 pb-4'>
-          <a className='navbar-brand brand-label' href='#'>
+          <Link className='navbar-brand brand-label' to='/'>
             <span>Sanjay</span>
             <span style={{ opacity: 0.5 }}>Magar</span>
-          </a>
+          </Link>
           <button
             className='navbar-toggler'
             type='button'
@@ -26,34 +28,34 @@ export const Navbar = () => {
           </button>
           <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
             <div className='navbar-nav nav-content'>
-              <a className='nav-item nav-link active' href='#'>
+              <Link className='nav-item nav-link active' to='/intro'>
                 <MdKeyboardArrowLeft size={24} />
-                Service <span className='sr-only'>(current)</span>
+                Intro <span className='sr-only'>(current)</span>
                 <MdKeyboardArrowRight size={24} />
-              </a>
-              <a className='nav-item nav-link' href='#'>
+              </Link>
+              <Link className='nav-item nav-link' to='/works'>
                 Works
-              </a>
-              <a className='nav-item nav-link' href='#'>
-                Notes
-              </a>
-              <a className='nav-item nav-link' href='#'>
+              </Link>
+              <Link className='nav-item nav-link' to='/projects'>
+                Projects
+              </Link>
+              <Link className='nav-item nav-link' to='/contacts'>
                 Contacts
-              </a>
+              </Link>
             </div>
 
             <div className='navbar-nav nav-content social-item'>
-              <a className='nav-item nav-link' href='#'>
+              <Link className='nav-item nav-link' to='/github'>
                 <AiFillGithub size={18} />
                 <span style={{ marginLeft: '8px' }}>Github</span>
-              </a>
-              <a className='nav-item nav-link' href='#'>
+              </Link>
+              <Link className='nav-item nav-link' to='/instagram'>
                 <FaInstagram size={15} />
                 <span style={{ marginLeft: '8px' }}>Instagram</span>
-              </a>
-              <a className='nav-item nav-link' href='#'>
+              </Link>
+              <Link className='nav-item nav-link' to='/email'>
                 <GoMail size={20} />
-              </a>
+              </Link>
             </div>
           </div>
         </nav>

@@ -34,6 +34,11 @@
         .repo--label {
           color: #fff;
           font-size: 2rem;
+          &:hover,
+          &:visited {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
 
         .repo--details--container {
@@ -56,11 +61,14 @@
           }
         }
       }
+
       .description {
         color: #606166;
         font-size: 1.4rem;
-        box-decoration-break: clone;
         max-width: 30rem;
+        max-height: 14rem;
+        overflow: hidden;
+        text-align: justify;
       }
       .languages--container {
         display: flex;

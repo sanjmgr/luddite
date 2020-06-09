@@ -40,6 +40,9 @@ body {
         .gitprojects--section .gitprojects--container .project--card .card--label .repo--label {
           color: #fff;
           font-size: 2rem; }
+          .gitprojects--section .gitprojects--container .project--card .card--label .repo--label:hover, .gitprojects--section .gitprojects--container .project--card .card--label .repo--label:visited {
+            text-decoration: underline;
+            cursor: pointer; }
         .gitprojects--section .gitprojects--container .project--card .card--label .repo--details--container {
           display: flex;
           justify-content: space-between;
@@ -56,8 +59,10 @@ body {
       .gitprojects--section .gitprojects--container .project--card .description {
         color: #606166;
         font-size: 1.4rem;
-        box-decoration-break: clone;
-        max-width: 30rem; }
+        max-width: 30rem;
+        max-height: 14rem;
+        overflow: hidden;
+        text-align: justify; }
       .gitprojects--section .gitprojects--container .project--card .languages--container {
         display: flex;
         justify-content: space-between;
@@ -169,7 +174,8 @@ body {
             font-size: 1.4rem;
             color: #fff; }
             .intro-section .brief--intro--container .work--brief--container .work--container .label--brief .projects--count:hover, .intro-section .brief--intro--container .work--brief--container .work--container .label--brief .projects--count:active {
-              text-decoration: underline; }
+              text-decoration: underline;
+              cursor: pointer; }
         .intro-section .brief--intro--container .work--brief--container .work--container .icon--container {
           padding-left: 7rem; }
     .intro-section .brief--intro--container .brief--intro--container {
@@ -200,7 +206,9 @@ body {
         font-size: 1.2rem;
         box-decoration-break: clone;
         max-width: 32rem;
-        letter-spacing: 0.1rem; }
+        letter-spacing: 0.1rem;
+        margin: 0 auto;
+        text-align: justify; }
   .intro-section .latest-work--section {
     display: flex;
     justify-content: space-between;
@@ -271,6 +279,28 @@ body {
           height: 15rem;
           background-size: cover;
           background-blend-mode: screen; }
+  .intro-section .typed-cursor {
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite; }
+
+@keyframes typedjsBlink {
+  50% {
+    opacity: 0; } }
+
+@-webkit-keyframes typedjsBlink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .intro-section .typed-fade-out {
+    opacity: 0;
+    transition: opacity 0.25s;
+    -webkit-animation: 0;
+    animation: 0; }
 
 .landing-section {
   background-color: #2d2e32; }
