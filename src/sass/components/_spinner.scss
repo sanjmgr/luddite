@@ -1,0 +1,60 @@
+.spinner-wrapper {
+  //   position: relative;
+  //   overflow: hidden;
+  position: relative;
+  //   width: $size;
+  //   height: $size;
+  flex: 1;
+  padding: $size * 0.5;
+  @for $i from 0 to $cells {
+    $ii: $i + 1;
+    &:nth-child(#{$ii}) {
+      .loader {
+        .dot {
+          @for $j from 0 to $dots {
+            $jj: $j + 1;
+            &:nth-child(#{$jj}) {
+              transform: rotate($da * $j);
+              &:after {
+                animation-delay: $ddur * $j * nth($dels, $ii);
+              }
+            }
+          }
+        }
+        .dot:after {
+          animation-timing-function: nth($fns, $ii);
+        }
+      }
+    }
+  }
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .dot {
+      position: absolute;
+      top: -1 * $cellR;
+      height: $cellR * 2;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%) translateY(-50%);
+        width: $dotR;
+        height: $dotR;
+        background-color: $c1;
+        border-radius: 100%;
+        transform: scale(1);
+        animation: a $dur infinite alternate;
+      }
+    }
+  }
+}
+
+@keyframes a {
+  to {
+    top: 100%;
+    transform: scale(0.5);
+    background-color: $c2;
+  }
+}

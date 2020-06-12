@@ -1,5 +1,6 @@
 .navbar--container {
   background-color: #2d2e32;
+  padding-top: 3rem;
 
   .brand-label {
     font-size: x-large;
@@ -27,7 +28,7 @@
 
   .nav-item {
     color: #fff;
-    font-size: $nav-font-size;
+    font-size: $normal-font-size;
     text-transform: uppercase;
 
     &:not(:last-child) {

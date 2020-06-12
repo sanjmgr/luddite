@@ -23,9 +23,9 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "sass:compile": "node-sass ./src/sass/main.scss ./src/css/style.css --watch",
-    "dev": "concurrently \"node-sass ./src/sass/main.scss ./src/css/style.css --watch\" \"npm run start\"",
+    "start": "react-scripts start -w",
+    "sass:compile": "node-sass ./src/sass/main.scss ./src/css/style.css -w",
+    "dev": "concurrently \"yarn sass:compile\" \"yarn start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

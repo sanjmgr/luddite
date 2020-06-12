@@ -59,23 +59,23 @@ export const RepoCard: React.FC<RepoCardProps> = ({
   };
 
   return (
-    <div className='project--card'>
-      <div className='card--label'>
-        <p className='repo--label' onClick={() => navigateToRepo(html_url)}>
+    <div className='project-card'>
+      <div className='card-label'>
+        <p className='repo-label' onClick={() => navigateToRepo(html_url)}>
           {name}
         </p>
-        <div className='repo--details--container'>
-          <div className='repo--statistics'>
+        <div className='repo-details-container'>
+          <div className='repo-statistics'>
             <AiOutlineStar size={14} color='#fff' />
-            <p className='statistics--counts'>{stargazers_count}</p>
+            <p className='statistics-counts'>{stargazers_count}</p>
           </div>
-          <div className='repo--statistics'>
+          <div className='repo-statistics'>
             <GoRepoForked size={14} color='#fff' />
-            <p className='statistics--counts'>{forks_count}</p>
+            <p className='statistics-counts'>{forks_count}</p>
           </div>
-          <div className='repo--statistics'>
+          <div className='repo-statistics'>
             <IoMdStopwatch size={14} color='#fff' />
-            <p className='statistics--counts'>{watchers_count}</p>
+            <p className='statistics-counts'>{watchers_count}</p>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ export const RepoCard: React.FC<RepoCardProps> = ({
         {description ||
           'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam doloremque consectetur provident minima, doloribus nulla adipisci est accusamus blanditiis itaque velit temporibus, fuga quasi quis?'}
       </p>
-      <div className='languages--container'>
+      <div className='languages-container'>
         {keys.map((key, index) => (
           <p className='language' key={index}>
             {key}: {+((values[index] * 100) / total).toFixed(1) + '%'}

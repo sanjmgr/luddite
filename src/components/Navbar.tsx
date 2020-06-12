@@ -12,8 +12,7 @@ export const Navbar = () => {
       <div className='container'>
         <nav className='navbar navbar-expand-lg pt-4 pb-4'>
           <Link className='navbar-brand brand-label' to='/'>
-            <span>Sanjay</span>
-            <span style={{ opacity: 0.5 }}>Magar</span>
+            <span>SANJMGR</span>
           </Link>
           <button
             className='navbar-toggler'

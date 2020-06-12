@@ -58,8 +58,8 @@ export const Intro = () => {
       backSpeed: 100,
       loop: true,
       strings: [
-        "Hello! I'm Sanjay Galami Magar",
-        "I'm Computer Enginner",
+        "Hello! I'm Sanjay Gharti Magar",
+        "I'm Computer Engineer",
         "I'm Full Stack developer",
       ],
     });

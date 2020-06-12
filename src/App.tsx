@@ -6,7 +6,7 @@ import { Navbar } from './components/Navbar';
 import { Landing } from './components/Landing';
 import { Intro } from './components/Intro';
 import { Contacts } from './components/Contacts';
-import { GitProjects } from './components/GitProjects';
+import { Projects } from './components/Projects';
 
 function App() {
   return (
@@ -15,11 +15,11 @@ function App() {
         <Navbar />
         <Landing />
         <Intro />
-        <GitProjects />
+        <Projects />
         <Contacts />
         <Switch>
           <Route exact path='/intro' component={Intro} />
-          <Route exact path='/projects' component={GitProjects} />
+          <Route exact path='/projects' component={Projects} />
           <Route exact path='/contacts' component={Contacts} />
           <Route exact path='/' component={Landing} />
         </Switch>

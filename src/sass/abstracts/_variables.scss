@@ -1,3 +1,53 @@
+// COLOR
+$bg-color-primary: #25262a;
+$bg-color-secondary: #2d2e32;
+$bg-color-ternary: #cfcfcf;
+
+$color-white: #fff;
+$color-dark: #000;
+$color-active: #6aefaa;
+$fruit-salad-color: #4caf50;
+$grey-color-primary: #9898a1;
+$grey-color-secondary: #d9d9d9; // brand
+
+$tech-color-primary: #6373f4;
+$tech-color-secondary: #6aefae;
+$tech-color-ternary: #f34f4f;
+
+$card-1-color-primary: #16191e;
+$card-1-color-secondary: #232325;
+
+$card-2-color-primary: #2d3037;
+$card-2-color-secondary: #292931;
+
+$card-3-color-primary: #16192b;
+$card-3-color-secondary: #192044;
+
+$project-label-color: #666666;
+
 // FONT
-$nav-font-size: 1.4rem;
-$default-font-size: 1.6rem;
+$extra-large-font-size: 2.5rem;
+$large-font-size: 2rem;
+$medium-font-size: 1.6rem;
+$normal-font-size: 1.4rem;
+$small-font-size: 1.2rem;
+
+// SPINNER
+$cells: 1;
+$dots: 23;
+$size: 200px;
+
+$cellR: $size * 0.3;
+$dotR: $size * 0.05;
+
+$da: 360deg / $dots;
+$dur: 1s;
+$ddur: $dur / $dots;
+
+$bg: #37474f;
+$c1: #ff4081;
+$c2: #ffab40;
+
+$fns: cubic-bezier(0.65, 0.05, 0.36, 1), cubic-bezier(0.55, 0.06, 0.68, 0.19),
+  cubic-bezier(0.46, 0.03, 0.52, 0.96), cubic-bezier(0.65, 0.05, 0.36, 1);
+$dels: 4, 0.25, 1, 2;

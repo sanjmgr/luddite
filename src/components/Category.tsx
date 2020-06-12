@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface CategoryProps {
   label: string;
   description: string;

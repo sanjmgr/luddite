@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
 import { RepoCard } from './RepoCard';
+import Axios from 'axios';
+import { Spinner } from './Spinner';
 
-interface GitProjectsProps {
+interface ProjectsProps {
   username: string;
   clientId: string;
   clientSecret: string;
@@ -11,8 +12,8 @@ interface GitProjectsProps {
   repos: any[];
 }
 
-export const GitProjects: React.FC = () => {
-  const [gitRepo, setGitRepo] = useState<GitProjectsProps>({
+export const Projects: React.FC = () => {
+  const [gitRepo, setGitRepo] = useState<ProjectsProps>({
     username: 'sanjaymagar',
     clientId: '26c196bacea7db10cf48',
     clientSecret: '0885cb690e07d2a93a6afb0891fb552fd9f7aa53',
@@ -46,14 +47,14 @@ export const GitProjects: React.FC = () => {
 
   const { repos } = gitRepo;
   return (
-    <div className='gitprojects--section'>
+    <div className='projects-page'>
+      <p className='git-repo-label'>Repositories</p>
       <div className='container'>
-        <h3 className='git--repos--label'>Repositories</h3>
-        <div className='gitprojects--container'>
-          {repos.map(repo => (
-            <RepoCard {...repo} key={repo.id} />
-          ))}
-        </div>
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          repos.map(repo => <RepoCard {...repo} key={repo.id} />)
+        )}
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
-@import './abstracts/mixins';
 @import './abstracts//variables';
 
 @import './base/base';
 @import './base/typography';
 
-@import './components/gitprojects.scss';
-@import './components/contacts.scss';
+@import './components/navbar.scss';
 @import './components/intro.scss';
 @import './components/landing.scss';
-@import './components/navbar.scss';
+@import './components/projects';
+@import './components/repocard';
+@import './components/contacts.scss';
+@import './components/spinner';

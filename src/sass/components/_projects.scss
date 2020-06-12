@@ -1,0 +1,25 @@
+.projects-page {
+  background-color: $bg-color-secondary;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  .git-repo-label {
+    color: $color-white;
+    font-size: $extra-large-font-size;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: 4rem;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .spinner {
+      width: '200px';
+      background-color: transparentize($color: #000000, $amount: 0);
+      justify-content: center;
+      align-items: center;
+      margin: 'auto';
+    }
+  }
+}
