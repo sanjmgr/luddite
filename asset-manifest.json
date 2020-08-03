@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/luddite/static/css/main.2eb0afc3.chunk.css",
+    "main.js": "/luddite/static/js/main.1ee2bd0d.chunk.js",
+    "main.js.map": "/luddite/static/js/main.1ee2bd0d.chunk.js.map",
+    "runtime-main.js": "/luddite/static/js/runtime-main.383a9598.js",
+    "runtime-main.js.map": "/luddite/static/js/runtime-main.383a9598.js.map",
+    "static/js/2.c6c22ec4.chunk.js": "/luddite/static/js/2.c6c22ec4.chunk.js",
+    "static/js/2.c6c22ec4.chunk.js.map": "/luddite/static/js/2.c6c22ec4.chunk.js.map",
+    "index.html": "/luddite/index.html",
+    "precache-manifest.f28c40ad266f142127599c9f4815b9f6.js": "/luddite/precache-manifest.f28c40ad266f142127599c9f4815b9f6.js",
+    "service-worker.js": "/luddite/service-worker.js",
+    "static/css/main.2eb0afc3.chunk.css.map": "/luddite/static/css/main.2eb0afc3.chunk.css.map",
+    "static/js/2.c6c22ec4.chunk.js.LICENSE.txt": "/luddite/static/js/2.c6c22ec4.chunk.js.LICENSE.txt",
+    "static/media/MERN.png": "/luddite/static/media/MERN.e164d896.png",
+    "static/media/Netflix.png": "/luddite/static/media/Netflix.76c6d0b7.png",
+    "static/media/Profile.jpg": "/luddite/static/media/Profile.3f04794e.jpg",
+    "static/media/javascript.png": "/luddite/static/media/javascript.36700bee.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.383a9598.js",
+    "static/js/2.c6c22ec4.chunk.js",
+    "static/css/main.2eb0afc3.chunk.css",
+    "static/js/main.1ee2bd0d.chunk.js"
+  ]
+}
