@@ -1,4 +1,4 @@
-[Live Demo](https://sanjaymagar.github.io/luddite/)
+[Live Demo](https://sanjmgr.github.io/luddite/)
 
 # luddite
 
